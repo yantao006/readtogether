@@ -1,6 +1,7 @@
 "use client";
 
 import { useUser } from "@clerk/nextjs";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 interface Book {
@@ -18,12 +19,12 @@ export default function HomePage() {
     return (
       <div className="flex flex-col items-center justify-center h-full gap-4">
         <p className="text-gray-600">Log in to enjoy more exciting content!</p>
-        <button
-          onClick={() => router.push("/login")}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        <Link
+          href="/sign-in"
+          className="px-4 py-2 bg-blue-500 text-white rounded"
         >
           Log in now
-        </button>
+        </Link>
       </div>
     );
   }

@@ -28,14 +28,18 @@ export default function UploadPage() {
         />
       </div>
 
-      <button
-        className="fixed bottom-4 left-4 right-4 p-3 bg-blue-500 text-white rounded hover:bg-blue-600"
-        onClick={() => {
-          // TODO: Implement upload logic
-        }}
-      >
-        Start uploading
-      </button>
+      <div className="fixed bottom-4 left-0 right-0 flex justify-center">
+        <div className="w-full max-w-[1400px] px-4">
+          <button
+            className="w-full p-3 bg-blue-500 text-white rounded hover:bg-blue-600"
+            onClick={() => {
+              // TODO: Implement upload logic
+            }}
+          >
+            Start uploading
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
