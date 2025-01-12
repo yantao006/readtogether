@@ -1,6 +1,6 @@
 "use client";
 
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, UserButton } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -23,8 +23,11 @@ export default function RootLayout({
         <body className={inter.className}>
           <div className="flex justify-center">
             <div className="flex flex-col h-screen w-full max-w-[1400px]">
-              <header className="p-4 border-b">
+              <header className="p-4 border-b flex items-center justify-between">
                 {showSearchBar && <SearchBar />}
+                <div className="flex items-center gap-4 ml-6">
+                  <UserButton afterSignOutUrl="/" />
+                </div>
               </header>
 
               <main className="flex-1 overflow-y-auto p-4">{children}</main>
